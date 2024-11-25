@@ -2,7 +2,21 @@ body {
   background-color:#CFE4FF;
 }
 
-button {
+/* button {
   width: 90px;
   height: 30px;
+} */
+
+button {
+  background-color: white;
+  color: black;
+  border: 2px solid #4B5B5E;
+  border-radius: 12px;
+  padding: 16px 20px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #4B5B5E; 
+  color: white;
 }
