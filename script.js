@@ -1,6 +1,6 @@
-var round = 1;
-var rounds = 0;
-localStorage.setItem("round", round);
+
+
+localStorage.setItem("round", 1);
 
 function getRounds() {
    let rounds = document.getElementById("rounds").value;
