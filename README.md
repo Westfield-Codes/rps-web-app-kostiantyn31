@@ -2,10 +2,10 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=17264876)
 ### To Do
 
-1. Preview this MarkDown file with Control+Shift+V
-1. Set the value of document element with id = rounds to "odd numbers only" if an even number is entered, and do not display this message as an alert.
-1.Create a div in chooser.html with id = result and write "Choose a move" inside it. 
-1. Display the findWinner message inside that div, replacing "Choose a Move" when there is a winner, instead of displaying that message as an alert. 
+1. **done** Preview this MarkDown file with Control+Shift+V
+1. **skip** Set the value of document element with id = rounds to "odd numbers only" if an even number is entered, and do not display this message as an alert.
+1. **done** Create a div in chooser.html with id = result and write "Choose a move" inside it. 
+1. **done** Display the findWinner message inside that div, replacing "Choose a Move" when there is a winner, instead of displaying that message as an alert. 
 1. Replace that result message with the "We both picked" alert message if u and c are the same, and do not display the alert. 
 1. To the body element, apply the css rule position:relative;
 1. On chooser.html, create a div with id = scoreBox above statsBox and containing the HTML "Score: loading"
