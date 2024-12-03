@@ -20,6 +20,7 @@ function setRounds(rounds){
         localStorage.setItem("round",1);
         window.location.href = "chooser.html";
         let score = [0,0];
+        
 }
 
 /* Function showRound
@@ -37,6 +38,8 @@ function showRound(){
     let statsBox = document.getElementById("statsBox");
     let message = "Round " + round + " of " + rounds;
     statsBox.innerHTML = message;
+    let scoreBox = document.getElementById("scoreBox");
+    scoreBox.innerHTML = message; 
 }
 
 /* Function cpuTurn
