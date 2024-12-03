@@ -1,15 +1,16 @@
 body {
-  background-color:#CFE4FF;
+  background-color: #CFE4FF;
+  position: relative;
 }
 
 #rounds {
-  width: 90px;
-  height: 50px;
+  width: 110px;
+  height: 60px;
 }
 
 #start {
-  width: 150px;
-  height: 70px;
+  width: 180px;
+  height: 80px;
 }
 
 #rps {
@@ -31,4 +32,16 @@ button:hover {
   color: white;
 }
 
+.centerr {
+  text-align: center;
+  padding-top: 290px;
+}
 
+#scoreBox {
+  position: absolute;
+  right: 150px;
+  top: 100px;
+  border: 2px solid black;
+  background: white;
+  padding: 15px;
+} 

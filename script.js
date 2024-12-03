@@ -19,6 +19,7 @@ function setRounds(rounds){
         localStorage.setItem("rounds",rounds);
         localStorage.setItem("round",1);
         window.location.href = "chooser.html";
+        let score = [0,0];
 }
 
 /* Function showRound
