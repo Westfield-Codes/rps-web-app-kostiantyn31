@@ -20,6 +20,8 @@ function setRounds(rounds){
         localStorage.setItem("round",1);
         window.location.href = "chooser.html";
         let score = [0,0];
+        // 1. Next, store the score array to local storage using JSONstringify.
+        localStorage.setItem("score",JSONstringify(score));
         
 }
 
@@ -30,6 +32,7 @@ function setRounds(rounds){
  * @return = none
  */
 function showRound(){
+    
     let round = localStorage.getItem("round");
     let rounds = localStorage.getItem("rounds");
     if (round > rounds) {
@@ -63,8 +66,9 @@ function cpuTurn(u){
  * @return = none
  */
 function findWinner(u,c){
+    window.location.href = "winlose.html";
     if (u == c){
-        document.getElementById("tesame").innerHTML="We both picked " + u;
+        document.getElementById("result").innerHTML="We both picked " + u;
     }
     else {
         let winner = " ";

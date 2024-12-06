@@ -11,7 +11,7 @@
 1. **done** On chooser.html, create a div with id = scoreBox above statsBox and containing the HTML "Score: loading"
 1. **done** Apply these css rules to a #scoreBox selector:  position:absolute; right:10px; top: 10px; border:1px solid black; background:white;padding:10px;
 1. **done** In setRounds, if rounds was odd, create an array called score and set it to [0,0]. 
-1. Next, store the score array to local storage using JSONstringify.
+1. **done** Next, store the score array to local storage using JSONstringify.
 1. In showRound, get score from local storage, JSON parsed.
 1. Next, replace "Score: loading" in scoreBox with score.toString()
 1. In findWinner, store the winner in local storage as winner.
