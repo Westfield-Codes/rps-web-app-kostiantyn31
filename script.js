@@ -18,11 +18,9 @@ function getRounds(){
 function setRounds(rounds){
         localStorage.setItem("rounds",rounds);
         localStorage.setItem("round",1);
-        window.location.href = "chooser.html";
         let score = [0,0];
-        // 1. Next, store the score array to local storage using JSONstringify.
-        localStorage.setItem("score",JSONstringify(score));
-        
+        localStorage.setItem("score", JSON.stringify(score));
+        window.location.href = "chooser.html";
 }
 
 /* Function showRound
@@ -32,7 +30,6 @@ function setRounds(rounds){
  * @return = none
  */
 function showRound(){
-    
     let round = localStorage.getItem("round");
     let rounds = localStorage.getItem("rounds");
     if (round > rounds) {
@@ -41,8 +38,10 @@ function showRound(){
     let statsBox = document.getElementById("statsBox");
     let message = "Round " + round + " of " + rounds;
     statsBox.innerHTML = message;
+    let score = JSON.parse(localStorage.getItem("score"));
     let scoreBox = document.getElementById("scoreBox");
-    scoreBox.innerHTML = message; 
+    scoreBox.innerHTML = score.toString(); 
+    
 }
 
 /* Function cpuTurn
@@ -84,6 +83,7 @@ function findWinner(u,c){
         let round = localStorage.getItem("round");
         round++;
         localStorage.setItem("round",round);
+        winner = localStorage.setItem("winner", winner);
         showRound();
     }
 }
