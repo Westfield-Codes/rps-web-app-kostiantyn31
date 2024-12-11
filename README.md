@@ -14,12 +14,12 @@
 1. **done** Next, store the score array to local storage using JSONstringify.
 1. **done** In showRound, get score from local storage, JSON parsed.
 1. **done** Next, replace "Score: loading" in scoreBox with score.toString()
-1. **ithinkdone** In findWinner, store the winner in local storage as winner.
-1. **ithinkdone** After you set the round, get the score array from local storage, JSON parsed. 
-1. Next, create a players array with the two players, "You" first. 
-1. Next, set win equal to the index of the winner in players.
-1. Next, increase by one the value of the element in the score array with index win
-1. Next, display the updated score in the scoreBox div with "Score : " + score.toString;
+1. **done** In findWinner, store the winner in local storage as winner.
+1. **done** After you set the round, get the score array from local storage, JSON parsed. 
+1. **done** Next, create a players array with the two players, "You" first. 
+1. **mbdone** Next, set win equal to the index of the winner in players.
+1. **mbdone** Next, increase by one the value of the element in the score array with index win
+1. **mbdone** Next, display the updated score in the scoreBox div with "Score : " + score.toString;
 1. Next, store the score array, stringified, in local storage.
 1. Now, in gameover.html, add the scorebox div above the play again button
 1. Give scoreBox the class "over" 

@@ -19,7 +19,7 @@ function setRounds(rounds){
         localStorage.setItem("rounds",rounds);
         localStorage.setItem("round",1);
         let score = [0,0];
-        // localStorage.setItem("score", JSON.stringify(score));
+        localStorage.setItem("score", JSON.stringify(score));
         window.location.href = "chooser.html";
 }
 
@@ -34,13 +34,19 @@ function showRound(){
     let rounds = localStorage.getItem("rounds");
     if (round > rounds) {
         window.location.href = "gameover.html";
+        if (score[0] > score[1]){
+            localStorage.getItem("winner", "You");
+        }
+        else {
+            localStorage.getItem("winner", "I");
+        }
     }
     let statsBox = document.getElementById("statsBox");
     let message = "Round " + round + " of " + rounds;
     statsBox.innerHTML = message;
     let score = JSON.parse(localStorage.getItem("score"));
     let scoreBox = document.getElementById("scoreBox");
-    scoreBox.innerHTML = score.toString(); 
+    scoreBox.innerHTML = "Score : " + score.toString(); 
     
 }
 
@@ -71,7 +77,7 @@ function findWinner(u,c){
     }
     else {
         let winner = " ";
-        let winArray=[["r","p","I"],["r","s","you"],["p","s","I"],["p","r","you"],["s","r","I"],["s","p","you"]];
+        let winArray=[["r","p","I"],["r","s","You"],["p","s","I"],["p","r","You"],["s","r","I"],["s","p","You"]];
         for (let i = 0; i< winArray.length; i++){
             if (winArray[i][0] == u && winArray[i][1]==c){
                 winner= winArray[i][2];
@@ -80,11 +86,17 @@ function findWinner(u,c){
         }
         // alert("You choose " + u + " and I choose " + c + " " + winner + " win!"); 
         document.getElementById("result").innerHTML="You choose " + u + " and I choose " + c + " " + winner + " win!";
+        let score = JSON.parse(localStorage.getItem('score'));
         let round = localStorage.getItem("round");
+        const players = ["You", "I"];
+        // set win equal to the index of the winner in players.
+        let win = players.indexOf(winner);
+        score[win] + 1;
         round++;
+        
         localStorage.setItem("round",round);
-        // localStorage.setItem('winner', JSON.stringify(winner));
-        // winArray = JSON.parse(localStorage.getItem('winArray'));
+        localStorage.setItem('winner',winner);
+        winArray = JSON.parse(localStorage.getItem('winArray'));
         showRound();
     }
 }
