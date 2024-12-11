@@ -15,7 +15,7 @@
 1. **done** In showRound, get score from local storage, JSON parsed.
 1. **done** Next, replace "Score: loading" in scoreBox with score.toString()
 1. **ithinkdone** In findWinner, store the winner in local storage as winner.
-1. After you set the round, get the score array from local storage, JSON parsed. 
+1. **ithinkdone** After you set the round, get the score array from local storage, JSON parsed. 
 1. Next, create a players array with the two players, "You" first. 
 1. Next, set win equal to the index of the winner in players.
 1. Next, increase by one the value of the element in the score array with index win

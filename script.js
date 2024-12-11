@@ -19,7 +19,7 @@ function setRounds(rounds){
         localStorage.setItem("rounds",rounds);
         localStorage.setItem("round",1);
         let score = [0,0];
-        localStorage.setItem("score", JSON.stringify(score));
+        // localStorage.setItem("score", JSON.stringify(score));
         window.location.href = "chooser.html";
 }
 
@@ -65,7 +65,7 @@ function cpuTurn(u){
  * @return = none
  */
 function findWinner(u,c){
-    window.location.href = "winlose.html";
+    // window.location.href = "winlose.html";
     if (u == c){
         document.getElementById("result").innerHTML="We both picked " + u;
     }
@@ -83,7 +83,8 @@ function findWinner(u,c){
         let round = localStorage.getItem("round");
         round++;
         localStorage.setItem("round",round);
-        winner = localStorage.setItem("winner", winner);
+        // localStorage.setItem('winner', JSON.stringify(winner));
+        // winArray = JSON.parse(localStorage.getItem('winArray'));
         showRound();
     }
 }
