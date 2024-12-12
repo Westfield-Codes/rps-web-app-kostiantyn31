@@ -37,12 +37,33 @@ button:hover {
   padding-top: 290px;
 }
 
+.centerrover {
+  text-align: center;
+  padding-top: 250px;
+}
+
 #scoreBox {
   position: absolute;
   right: 150px;
   top: 100px;
   border: 2px solid black;
-  background: white;
+  background: rgb(165, 162, 162);
   padding: 15px;
+  border-radius: 12px;
 }
 
+.over {
+  font-size: 20pt;
+  margin: auto;
+  position: static!important;
+  width: 10em;
+  text-align: center;
+}
+
+#statsBox {
+  font-size: 45px;
+}
+
+#result {
+  font-size: 25px;
+}

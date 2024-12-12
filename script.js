@@ -95,9 +95,18 @@ function findWinner(u,c){
         score[win] + 1;
         round++;
         
+        let scoreArray = JSON.stringify(u,c);
+        localStorage.setItem("scores", scoreArray);
+
+
+
         localStorage.setItem("round",round);
         localStorage.setItem('winner',winner);
         winArray = JSON.parse(localStorage.getItem('winArray'));
         showRound();
     }
+}
+
+function endGame() {
+    winArray = JSON.parse(localStorage.getItem('winArray'));
 }
