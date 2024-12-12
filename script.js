@@ -91,6 +91,7 @@ function findWinner(u,c){
         const players = ["You", "I"];
         // set win equal to the index of the winner in players.
         let win = players.indexOf(winner);
+        // Next, increase by one the value of the element in the score array with index win
         score[win] + 1;
         round++;
         
