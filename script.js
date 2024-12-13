@@ -18,8 +18,9 @@ function getRounds(){
 function setRounds(rounds){
         localStorage.setItem("rounds",rounds);
         localStorage.setItem("round",1);
-        let score = [0,0];
+        let score = [0, 0];
         localStorage.setItem("score", JSON.stringify(score));
+        score = JSON.parse(localStorage.getItem("score"));
         window.location.href = "chooser.html";
 }
 
@@ -44,9 +45,9 @@ function showRound(){
     let statsBox = document.getElementById("statsBox");
     let message = "Round " + round + " of " + rounds;
     statsBox.innerHTML = message;
-    let score = JSON.parse(localStorage.getItem("score"));
+    score = JSON.parse(localStorage.getItem("score"));
     let scoreBox = document.getElementById("scoreBox");
-    scoreBox.innerHTML = "Score : " + score.toString(); 
+    scoreBox.innerHTML = "Score : " + score.join(", "); 
     
 }
 
@@ -89,17 +90,12 @@ function findWinner(u,c){
         let score = JSON.parse(localStorage.getItem('score'));
         let round = localStorage.getItem("round");
         const players = ["You", "I"];
-        // set win equal to the index of the winner in players.
         let win = players.indexOf(winner);
-        // Next, increase by one the value of the element in the score array with index win
-        score[win] + 1;
         round++;
-        
+        score[win]++;
         let scoreArray = JSON.stringify(u,c);
         localStorage.setItem("scores", scoreArray);
-
-
-
+        localStorage.setItem("score", JSON.stringify(score));
         localStorage.setItem("round",round);
         localStorage.setItem('winner',winner);
         winArray = JSON.parse(localStorage.getItem('winArray'));
@@ -109,4 +105,7 @@ function findWinner(u,c){
 
 function endGame() {
     winArray = JSON.parse(localStorage.getItem('winArray'));
+    localStorage.setItem("scores", scoreArray);
+    let scoreBoxx = document.getElementById("scoreBoxx");
+    scoreBoxx.innerHTML = winArray + "Won!!! Score : " + score.join(", "); 
 }

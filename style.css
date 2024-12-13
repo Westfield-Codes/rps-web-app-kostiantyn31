@@ -52,6 +52,16 @@ button:hover {
   border-radius: 12px;
 }
 
+#scoreBoxx {
+  position: absolute;
+  right: 150px;
+  top: 100px;
+  border: 2px solid black;
+  background: rgb(165, 162, 162);
+  padding: 15px;
+  border-radius: 12px;
+}
+
 .over {
   font-size: 20pt;
   margin: auto;
